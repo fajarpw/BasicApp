@@ -1,4 +1,4 @@
-package org.aplas.basicapp;
+package org.aplas.basicapp.basicUI;
 
 import android.graphics.Typeface;
 import android.view.Gravity;
@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import org.aplas.basicapp.MainActivity;
 import org.junit.Before;
 import org.junit.FixMethodOrder;
 import org.junit.Test;

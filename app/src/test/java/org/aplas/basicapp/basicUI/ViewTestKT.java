@@ -1,4 +1,4 @@
-package org.aplas.basicapp;
+package org.aplas.basicapp.basicUI;
 
 import android.view.ViewGroup;
 

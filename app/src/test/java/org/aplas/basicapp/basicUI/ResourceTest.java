@@ -1,8 +1,8 @@
-package org.aplas.basicapp;
+package org.aplas.basicapp.basicUI;
 
 import android.content.res.Resources;
 
-public class ResourceTest extends ViewTest {
+public class ResourceTest extends ViewTestKT {
     private Resources resource;
 
     public ResourceTest(Resources rsc) {

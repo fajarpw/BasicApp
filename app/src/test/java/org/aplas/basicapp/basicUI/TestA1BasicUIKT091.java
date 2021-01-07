@@ -1,5 +1,6 @@
-package org.aplas.basicapp;
+package org.aplas.basicapp.basicUI;
 
+import org.aplas.basicapp.MainActivity;
 import org.junit.Before;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
@@ -13,7 +14,7 @@ import org.robolectric.annotation.Config;
 @Config(manifest=Config.NONE)
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 
-public class TestA1BasicUIKT081 extends ViewTestKT {
+public class TestA1BasicUIKT091 extends ViewTestKT {
     private MainActivity activity;
     private String packName;
     ResourceTest rsc;
@@ -26,7 +27,8 @@ public class TestA1BasicUIKT081 extends ViewTestKT {
     }
 
     @Test
-    public void check_01_Image_Resources() {
-        rsc.testImgResource("temperature");
+    public void check_01_Drawable_Resources() {
+        rsc.testDrawableResource("cell_style","");
+        rsc.testDrawableResource("header_style","");
     }
 }

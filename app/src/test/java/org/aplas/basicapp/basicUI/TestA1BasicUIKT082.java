@@ -1,8 +1,9 @@
-package org.aplas.basicapp;
+package org.aplas.basicapp.basicUI;
 
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
+import org.aplas.basicapp.MainActivity;
 import org.junit.Before;
 import org.junit.FixMethodOrder;
 import org.junit.Test;

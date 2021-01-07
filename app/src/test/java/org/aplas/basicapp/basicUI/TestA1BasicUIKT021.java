@@ -1,5 +1,6 @@
-package org.aplas.basicapp;
+package org.aplas.basicapp.basicUI;
 
+import org.aplas.basicapp.MainActivity;
 import org.junit.Before;
 import org.junit.FixMethodOrder;
 import org.junit.Test;

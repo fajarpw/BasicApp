@@ -1,7 +1,8 @@
-package org.aplas.basicapp;
+package org.aplas.basicapp.basicUI;
 
 import android.os.Build;
 
+import org.aplas.basicapp.MainActivity;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

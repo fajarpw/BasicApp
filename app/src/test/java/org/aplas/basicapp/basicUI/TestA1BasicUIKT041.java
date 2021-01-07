@@ -1,10 +1,11 @@
-package org.aplas.basicapp;
+package org.aplas.basicapp.basicUI;
 
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.Space;
 
+import org.aplas.basicapp.MainActivity;
 import org.junit.Before;
 import org.junit.FixMethodOrder;
 import org.junit.Test;

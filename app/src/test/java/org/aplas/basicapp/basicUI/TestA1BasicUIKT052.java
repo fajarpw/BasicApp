@@ -1,4 +1,4 @@
-package org.aplas.basicapp;
+package org.aplas.basicapp.basicUI;
 
 import android.graphics.Typeface;
 import android.text.InputType;
@@ -9,6 +9,7 @@ import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import org.aplas.basicapp.MainActivity;
 import org.junit.Before;
 import org.junit.FixMethodOrder;
 import org.junit.Test;

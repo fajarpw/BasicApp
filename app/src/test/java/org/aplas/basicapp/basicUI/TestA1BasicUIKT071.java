@@ -1,11 +1,11 @@
-package org.aplas.basicapp;
+package org.aplas.basicapp.basicUI;
 
-import android.view.Gravity;
 import android.view.ViewGroup;
-import android.widget.CheckBox;
-import android.widget.LinearLayout;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
 
+import org.aplas.basicapp.MainActivity;
 import org.junit.Before;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
@@ -22,10 +22,10 @@ import java.util.List;
 @Config(manifest=Config.NONE)
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 
-public class TestA1BasicUIKT061 extends ViewTestKT {
+public class TestA1BasicUIKT071 extends ViewTestKT {
     private MainActivity activity;
     private RelativeLayout mainLayout;
-    private LinearLayout layout;
+    private RadioGroup layout;
 
     @Before
     public void initTest() {
@@ -41,15 +41,16 @@ public class TestA1BasicUIKT061 extends ViewTestKT {
         //Load layout
         int compId = activity.getResources().getIdentifier(layoutName, "id", activity.getPackageName());
         mainLayout = (RelativeLayout) activity.findViewById(compId);
-        layout = (LinearLayout) mainLayout.getChildAt(4);
+        layout =  (RadioGroup) mainLayout.getChildAt(5);
     }
 
     private void checkCompletion() throws NullPointerException, ClassCastException {
         /******** Check components completion ********/
         /** Specified Elements **/
         List<Class> elements = new ArrayList<>();
-        elements.add(androidx.appcompat.widget.AppCompatCheckBox.class); //Element 1
-        elements.add(androidx.appcompat.widget.AppCompatCheckBox.class);  //Element 2
+        elements.add(androidx.appcompat.widget.AppCompatRadioButton.class); //Element 1
+        elements.add(androidx.appcompat.widget.AppCompatRadioButton.class); //Element 2
+        elements.add(androidx.appcompat.widget.AppCompatRadioButton.class); //Element 3
         /************************/
 
         //JUnit Test
@@ -58,49 +59,59 @@ public class TestA1BasicUIKT061 extends ViewTestKT {
     }
 
     @Test
-    public void check_01_ChildLayout_Properties() throws Exception { //Check Button Specification
-        //Component properties value
-        LinearLayout component = layout;
+    public void check_01_RadioGroup_Properties() { //Check Layout Specification
+        //Preprocessing
+        RadioGroup component = layout;
         ElementTest comp = new ElementTest(component);
 
         //Component properties value
-        comp.testIdName("child2");
+        comp.testIdName("radioGroup");
         comp.testWidth(ViewGroup.LayoutParams.MATCH_PARENT);
         comp.testHeight(ViewGroup.LayoutParams.WRAP_CONTENT);
-        comp.testOrientation(LinearLayout.HORIZONTAL);
-        comp.testTopMargin(11);
-        comp.testLayoutBelow(mainLayout.getChildAt(3).getId());
+        comp.testOrientation(RadioGroup.HORIZONTAL);
+        comp.testLayoutBelow(mainLayout.getChildAt(4).getId());
     }
 
     @Test
-    public void check_02_Checkbox_Properties() { //Check Layout Specification
+    public void check_02_RadioButton_Properties() { //Check Layout Specification
         //Preprocessing
-        CheckBox component = (CheckBox) layout.getChildAt(0);
+        RadioButton component = (RadioButton) layout.getChildAt(0);
         ElementTest comp = new ElementTest(component);
 
         //Component properties value
-        comp.testIdName("chkRounded");
+        comp.testIdName("rbTemp");
         comp.testWidth(ViewGroup.LayoutParams.WRAP_CONTENT);
         comp.testHeight(ViewGroup.LayoutParams.WRAP_CONTENT);
-        comp.testTextString("Rounded");
-        comp.testTextSize((float)18);
-        comp.testGravity(Gravity.CENTER);
+        comp.testTextString("Temperature");
         comp.testSelected(true);
     }
 
     @Test
-    public void check_03_Checkbox_Properties() { //Check Layout Specification
+    public void check_03_RadioButton_Properties() { //Check Layout Specification
         //Preprocessing
-        CheckBox component = (CheckBox) layout.getChildAt(1);
+        RadioButton component = (RadioButton) layout.getChildAt(1);
         ElementTest comp = new ElementTest(component);
 
         //Component properties value
-        comp.testIdName("chkFormula");
+        comp.testIdName("rbDist");
         comp.testWidth(ViewGroup.LayoutParams.WRAP_CONTENT);
         comp.testHeight(ViewGroup.LayoutParams.WRAP_CONTENT);
-        comp.testTextString("Show Formula");
-        comp.testTextSize((float)18);
-        comp.testGravity(Gravity.CENTER);
+        comp.testTextString("Distance");
         comp.testSelected(false);
     }
+
+    @Test
+    public void check_04_RadioButton_Properties() { //Check Layout Specification
+        //Preprocessing
+        RadioButton component = (RadioButton) layout.getChildAt(2);
+        ElementTest comp = new ElementTest(component);
+
+        //Component properties value
+        comp.testIdName("rbWeight");
+        comp.testWidth(ViewGroup.LayoutParams.WRAP_CONTENT);
+        comp.testHeight(ViewGroup.LayoutParams.WRAP_CONTENT);
+        comp.testTextString("Weight");
+        comp.testSelected(false);
+    }
+
 }

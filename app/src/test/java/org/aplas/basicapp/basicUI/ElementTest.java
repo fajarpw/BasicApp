@@ -1,4 +1,4 @@
-package org.aplas.basicapp;
+package org.aplas.basicapp.basicUI;
 
 import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
@@ -15,7 +15,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
-public class ElementTest extends ViewTest {
+public class ElementTest extends ViewTestKT {
     private View component;
     private String compName;
     private String msgHeader;
